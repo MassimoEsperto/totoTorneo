@@ -18,6 +18,7 @@ import { EventiModificabiliComponent } from './risultati/eventi-modificabili/eve
 import { SchedeConcluseComponent } from './risultati/schede-concluse/schede-concluse.component';
 import { RouterModule } from '@angular/router';
 import { PAGE } from 'src/environments/costanti';
+import { MyConfirmDialog } from 'src/app/componenti/my-confirm-dialog/my-confirm-dialog.component';
 
 
 @Component({
@@ -26,6 +27,7 @@ import { PAGE } from 'src/environments/costanti';
   imports: [
     CommonModule,
     RouterModule,
+    MyConfirmDialog,
     UtentiComponent,
     SquadreComponent,
     CannonieriComponent,
@@ -58,7 +60,6 @@ export class AdministrationComponent extends vrs implements OnInit {
 
   ngOnInit() {
     this.getCombo()
-    console.log("competizione",this.competizione)
   }
 
   selected(item: CompetizioneModel) {

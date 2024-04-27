@@ -6,7 +6,7 @@
 $table-striped-color: yellow;
 
 body {
-
+    background-color: #507ac8;
     background-image: url("assets/img/sfondo.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -88,8 +88,8 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, .125);
 }
 
-.table_trasparent { 
-    --bs-table-bg: transparent !important; 
+.table_trasparent {
+    --bs-table-bg: transparent !important;
     --bs-table-color: gainsboro;
     --bs-table-striped-color: gainsboro;
 }
