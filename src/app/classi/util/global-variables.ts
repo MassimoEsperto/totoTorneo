@@ -3,7 +3,7 @@
 export abstract class vrs {
 
   loading_btn: boolean = false;
-  loading_page: boolean = false;
+  loading_page: boolean = true;
   loading_table: boolean = false;
 
   idxTable: number = 0;

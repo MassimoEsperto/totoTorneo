@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs';
 import { CompetizioneModel } from 'src/app/classi/model/competizione.model';
 import { vrs } from 'src/app/classi/util/global-variables';
+import { MyIcona } from 'src/app/componenti/my-icona/my-icona.component';
 import { MySpinner } from 'src/app/componenti/my-spinner/my-spinner.component';
 import { MyTabScrollable } from 'src/app/componenti/my-tab-scrollable/my-tab-scrollable.component';
 import { AlertService } from 'src/servizi/applicazione/alert.service';
@@ -14,7 +15,8 @@ import { PlayerService } from 'src/servizi/player/player.service';
   imports: [
     MySpinner,
     CommonModule,
-    MyTabScrollable
+    MyTabScrollable,
+    MyIcona
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

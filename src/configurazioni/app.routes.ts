@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { inject } from '@angular/core';
+import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot, Routes } from '@angular/router';
 import { AdministrationComponent } from 'src/app/pagine/administration/administration.component';
 import { ClassificheComponent } from 'src/app/pagine/dashboard/classifiche/classifiche.component';
 import { DashboardComponent } from 'src/app/pagine/dashboard/dashboard.component';
@@ -7,6 +8,24 @@ import { SchedeUtentiComponent } from 'src/app/pagine/dashboard/schede-utenti/sc
 import { LoginComponent } from 'src/app/pagine/login/login.component';
 import { PageNotFoundComponent } from 'src/app/pagine/page-not-found/page-not-found.component';
 import { PAGE } from 'src/environments/costanti';
+import { AuthService } from 'src/servizi/autenticazione/auth.service';
+
+
+
+const AdminGuard: CanActivateFn =
+  (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+    return inject(AuthService).isAdmin()
+      ? true
+      : inject(Router).navigate([PAGE.DEFAULT]);
+  };
+
+const PlayerGuard: CanActivateFn =
+  (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+    return inject(AuthService).isLogged()
+      ? true
+      : inject(Router).navigate([PAGE.DEFAULT]);
+  };
+
 
 export const routes: Routes = [
     {
@@ -21,7 +40,7 @@ export const routes: Routes = [
     {
       path: PAGE.DASHBOARD.PATH,
       component: DashboardComponent,
-     // canActivate: [PlayerGuard],
+      canActivate: [PlayerGuard],
       children: [
         {
           path: PAGE.DASHBOARD.RELATIVE.HOME,
@@ -46,7 +65,7 @@ export const routes: Routes = [
     {
       path: PAGE.ADMINISTRATOR.PATH,
       component: AdministrationComponent,
-      // canActivate: [AdminGuard],
+       canActivate: [AdminGuard],
     },
    /*
     {

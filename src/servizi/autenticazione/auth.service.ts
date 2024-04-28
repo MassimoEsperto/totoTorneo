@@ -69,6 +69,9 @@ export class AuthService extends HttpSenderService {
   }
 
   isAdmin() {
+
+    if(!this.isLogged()) return false
+
     let utente = this.getLocalStorageParse()
     if (utente.ruolo == Ruolo.ADMIN) {
       return true

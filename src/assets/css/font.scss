@@ -1,0 +1,23 @@
+/* vai su google font seleziona get embeded code clicca import , 
+copia url di import nel browser ed è fatta, ottieni il font face */
+/* latin */
+@font-face {
+    font-family: 'Rock Salt';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Itim'), url('../../assets/font/Itim.woff2') format('woff2');
+  }
+
+* {
+    font-family: 'Itim', sans-serif;
+}
+
+/* fallback */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Symbols Outlined'), url('../../assets/font/icone-google.woff2') format('woff2');
+}
+

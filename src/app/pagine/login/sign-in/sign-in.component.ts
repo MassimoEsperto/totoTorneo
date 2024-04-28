@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { finalize } from 'rxjs/operators';
 import { vrs } from 'src/app/classi/util/global-variables';
 import { MyButton } from 'src/app/componenti/my-button/my-button.component';
+import { MyIcona } from 'src/app/componenti/my-icona/my-icona.component';
 import { AlertService } from 'src/servizi/applicazione/alert.service';
 import { AuthService } from 'src/servizi/autenticazione/auth.service';
 
@@ -14,7 +15,8 @@ import { AuthService } from 'src/servizi/autenticazione/auth.service';
   standalone: true,
   imports: [
     MyButton,
-    FormsModule
+    FormsModule,
+    MyIcona
   ],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.scss'

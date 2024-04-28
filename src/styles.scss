@@ -2,19 +2,20 @@
 @import 'assets/css/padding.scss';
 @import 'assets/css/margin.scss';
 @import 'assets/css/bottoni.scss';
+@import 'assets/css/font.scss';
 
-$table-striped-color: yellow;
 
 body {
-    background-color: #507ac8;
-    background-image: url("assets/img/sfondo.png");
+    background-color: #2c4d89;
+    background-image: url("assets/img/sfondo.webp");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
+    min-height: 100vh;
 }
 
 .page {
-    min-height: 100vh;
+
     padding: 8px;
 
 }
@@ -177,7 +178,7 @@ body {
 }
 
 .modal-fullscreen .modal-content {
-    background-image: url("assets/img/modale.png");
+    background-image: url("assets/img/modale.webp");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -197,3 +198,7 @@ body {
     bottom: 64px;
     left: 8px;
 }
+
+.navbar-font-label{
+    font-size: 0.8rem;
+ }

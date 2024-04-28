@@ -4,27 +4,27 @@
 
         <!-- HOME -->
         <my-navlink [isCollapse]="isCollapse" [exist]="true" [link]="PAGE.DASHBOARD.ABSOLUTE._HOME"
-            [icon]="'bi bi-house-fill'" [label]="'HOME'" (myClick)="isCollapse=false">
+            [icon]="'house'" [label]="'HOME'" (myClick)="isCollapse=false">
         </my-navlink>
 
         <!-- GIOCA -->
         <my-navlink [isCollapse]="isCollapse" [exist]="exist" [link]="PAGE.DASHBOARD.ABSOLUTE._SCHEDE_UTENTE"
-            [icon]="'bi bi-cash'" [label]="'GIOCA'" (myClick)="isCollapse=false">
+            [icon]="'stadia_controller'" [label]="'GIOCA'" (myClick)="isCollapse=false">
         </my-navlink>
 
         <!-- CLASSIFICA -->
         <my-navlink [isCollapse]="isCollapse" [exist]="exist" [link]="PAGE.DASHBOARD.ABSOLUTE._CLASSIFICA"
-            [icon]="'bi bi-list-ol'" [label]="'CLASS.'" (myClick)="isCollapse=false">
+            [icon]="'monitoring'" [label]="'CLASS.'" (myClick)="isCollapse=false">
         </my-navlink>
 
         <!-- INFO -->
         <div class="colonna" data-bs-toggle="collapse" data-bs-target="#impostazioni" aria-expanded="false"
             aria-controls="impostazioni" (click)="isCollapse=!isCollapse">
-            <div class="icona">
-                <i class="bi bi-gear-fill"></i>
+            <div>
+                <my-icona [name]="'settings'"></my-icona>
             </div>
             <div>
-                <span>INFO</span>
+                <span class="navbar-font-label"><b>INFO</b></span>
             </div>
         </div>
 

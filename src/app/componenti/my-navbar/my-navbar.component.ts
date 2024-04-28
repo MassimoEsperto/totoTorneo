@@ -5,6 +5,7 @@ import { MyFooter } from '../my-footer/my-footer.component';
 import { PAGE } from 'src/environments/costanti';
 import { RouterModule } from '@angular/router';
 import { MyNavlink } from '../my-navlink/my-navlink.component';
+import { MyIcona } from '../my-icona/my-icona.component';
 
 
 @Component({
@@ -14,7 +15,8 @@ import { MyNavlink } from '../my-navlink/my-navlink.component';
     CommonModule,
     MyFooter,
     RouterModule,
-    MyNavlink
+    MyNavlink,
+    MyIcona
   ],
   templateUrl: './my-navbar.component.html',
   styleUrl: './my-navbar.component.scss'

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { MyIcona } from '../my-icona/my-icona.component';
 
 @Component({
   selector: 'my-navlink',
@@ -8,7 +9,8 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MyIcona
   ],
   styleUrl: './my-navlink.component.scss'
 })

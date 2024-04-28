@@ -4,8 +4,6 @@
 
 <div *ngIf="!loading_page" class="fadein">
 
-
-
   <div *ngIf="play_comp" class="titolo-page">
     <h1>{{play_comp.sigla}}</h1>
   </div>
@@ -17,10 +15,17 @@
   <div class="d-grid gap-2">
     <button class="btn btn-secondary btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
       aria-controls="offcanvasTop">
-      <span *ngIf="!play_comp"> Seleziona Competizione </span>
-      <span *ngIf="play_comp"> Cambia Competizione </span>
-      <i *ngIf="!play_comp" class="bi bi-reply-all-fill"></i>
-      <i *ngIf="play_comp" class="bi bi-arrow-repeat"></i>
+
+      <div *ngIf="!play_comp" class="display-center">
+        <span class="pr-8"> Seleziona Competizione </span>
+        <my-icona [name]="'back_hand'"></my-icona>
+      </div>
+
+      <div *ngIf="play_comp" class="display-center">
+        <span class="pr-8"> Cambia Competizione </span>
+        <my-icona [name]="'manage_history'"></my-icona>
+      </div>
+
     </button>
   </div>
 
