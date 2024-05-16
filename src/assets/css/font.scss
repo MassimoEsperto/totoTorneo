@@ -2,16 +2,16 @@
 copia url di import nel browser ed è fatta, ottieni il font face */
 /* latin */
 @font-face {
-    font-family: 'Rock Salt';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Itim'), url('../../assets/font/Itim.woff2') format('woff2');
-  }
+  font-family: 'Howlimit';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Howlimit'), url('../../assets/font/Howlimit-axRO5.woff') format('woff');
+}
 
 * {
-    font-family: 'Itim', sans-serif;
+  font-family: 'Howlimit', sans-serif;
 }
+
 
 /* fallback */
 @font-face {
